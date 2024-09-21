@@ -18,4 +18,4 @@ This CLI minigame features the following:
 
 ---
 
-Originally inspired by and developed for our [F.I.S.T](https://www.exaltedfuneral.com/products/fist-pdf) TTRPG campaigns, to ensure that the character(s) with the "Hacker" trait could quickly / easily attempt to hack into various systems in the campaign, all while knowing the dangers that it could bring if they ran out of time.
+Originally inspired by and developed for our [F.I.S.T](https://www.exaltedfuneral.com/products/fist-ultra-edition) TTRPG campaigns, to ensure that the character(s) with the "Hacker" trait could quickly / easily attempt to hack into various systems in the campaign, all while knowing the dangers that it could bring if they ran out of time.
