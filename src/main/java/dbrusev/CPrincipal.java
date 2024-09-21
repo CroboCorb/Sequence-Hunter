@@ -21,7 +21,7 @@ public class CPrincipal {
 			System.out.println("AVAILABLE LANGUAGES:");
 			System.out.println("1) English");
 			System.out.println("2) Español\n");
-			try {System.out.print("> ");; idiomaEscogido = lector.nextInt();}
+			try {System.out.print("> "); idiomaEscogido = lector.nextInt();}
 			catch (Exception noEsNumero) {lector.next();}
 		}
 		

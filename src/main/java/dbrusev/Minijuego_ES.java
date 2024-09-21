@@ -112,16 +112,17 @@ public class Minijuego_ES {
 				funciones.muestraSecuenciaDesbloqueada(secuenciaDesbloqueada, secuenciaNumeros.size());
 				try {System.out.print("> "); entradaUsuario = lector.nextInt();}
 				catch (InputMismatchException noEsNumero) {entradaUsuario = 0; lector.next(); funciones.limpiarConsola(false);}
+				if (entradaUsuario < 10) {funciones.limpiarConsola(false);}
 			}
-			
+
 			for (int i = 0; i < funciones.getFilas(); i++) {
-				if (entradaUsuario == secuenciaNumeros.get(0) && i == secuenciaFilas.get(0)) {
+				if (entradaUsuario == secuenciaNumeros.getFirst() && i == secuenciaFilas.getFirst()) {
 					secuenciaDesbloqueada.set(contadorColumna, Integer.toString(entradaUsuario));
 					tableroJuego[i][contadorColumna] = tableroJuego[i][contadorColumna+1] = "xx";
-					
-					secuenciaNumeros.remove(0); secuenciaFilas.remove(0);
+
+					secuenciaNumeros.removeFirst(); secuenciaFilas.removeFirst();
 					contadorColumna++; break;
-				}
+				} else {funciones.limpiarConsola(false);}
 			} funciones.limpiarConsola(false);
 		} contadorColumna++;
 		
@@ -136,7 +137,7 @@ public class Minijuego_ES {
 			System.out.print(" en " + tiempoCompletado + " segundos -\n");
 			
 			System.out.println("Estadísticas guardadas en " + ansi().fg(YELLOW).a(guardaStats.getLocalizacionArchivo()).reset());
-		} else {System.out.println("Modo debug " + ansi().fg(RED).a("activado").reset() + ": no se han guardado las estadísticas.");}
+		} else {System.out.print(" -\nModo debug " + ansi().fg(RED).a("activado").reset() + ": no se han guardado las estadísticas.");}
 	}
 	
 }

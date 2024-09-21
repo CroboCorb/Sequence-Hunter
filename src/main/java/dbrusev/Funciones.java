@@ -134,9 +134,16 @@ public class Funciones {
 	}
 	
 	public void muestraTablero(String[][] tablero, int contador) {
+		int bordesTablero = (columnas - 1) + (columnas * 4);
 		muestraTitulo(); contador--;
+
+		System.out.print("╔");
+		for (int bordeDibujado = 0; bordeDibujado < bordesTablero; bordeDibujado++) {
+			System.out.print("═");
+		} System.out.print("╗\n");
+
 		for (int i = 0; i < filas; i++) {
-			System.out.print("| ");
+			System.out.print("║ ");
 			for (int j = 0; j < columnas; j++) {
 				if (tablero[i][j] == "xx") {
 					if (j + 1 == columnas) {System.out.print(ansi().fg(GREEN).a(tablero[i][j]).reset());}
@@ -150,8 +157,14 @@ public class Funciones {
 						else {System.out.print(tablero[i][j] + " - ");}
 					}
 				}
-			} System.out.print(" |\n");
+			} System.out.print(" ║\n");
 		}
+
+		System.out.print("╚");
+		for (int bordeDibujado = 0; bordeDibujado < bordesTablero; bordeDibujado++) {
+			System.out.print("═");
+		} System.out.print("╝\n");
+
 	}
 	
 	public void muestraSecuenciaDesbloqueada(List<String> secuencia, int numsPorDesbloquear) {
