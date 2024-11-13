@@ -6,7 +6,7 @@
 
     <groupId>dbrusev</groupId>
     <artifactId>SequenceHuntMinigame</artifactId>
-    <version>v1.0</version>
+    <version>v1.2.0</version>
     <name>Sequence Hunt Minigame</name>
 
     <properties>
