@@ -122,11 +122,11 @@ public class Main {
 			}
 
 			for (int i = 0; i < methods.getRows(); i++) {
-				if (userInput == numberSequence.getFirst() && i == rowSequence.getFirst()) {
+				if (userInput == numberSequence.get(0) && i == rowSequence.get(0)) {
 					unlockedSequence.set(columnCounter, Integer.toString(userInput));
 					gameBoard[i][columnCounter] = gameBoard[i][columnCounter+1] = "xx";
 
-					numberSequence.removeFirst(); rowSequence.removeFirst();
+					numberSequence.remove(0); rowSequence.remove(0);
 					columnCounter++; break;
 				} else {
                     methods.clearConsole(false);}
