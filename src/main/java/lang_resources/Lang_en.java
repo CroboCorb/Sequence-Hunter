@@ -1,14 +1,18 @@
 package lang_resources;
 
-import java.util.*;
+import java.util.ListResourceBundle;
 
-public class Lang_en_EN extends ListResourceBundle {
+/**
+ * Resource Bundle for English translations.
+ * @author Crob
+ */
+public class Lang_en extends ListResourceBundle {
 
     public String[][] getContents() {
         return localizedStrings;
     }
 
-    private String[][] localizedStrings = {
+    private final String[][] localizedStrings = {
             // DIFFICULTY MENU STRINGS
             { "difficultyMenu_EASY", "1) Easy [6x6] (FxC)" },
             { "difficultyMenu_MEDIUM", "2) Medium [10x10] (FxC)" },
@@ -17,7 +21,7 @@ public class Lang_en_EN extends ListResourceBundle {
             { "difficultyMenu_CUSTOM", "5) Custom [-x-] (FxC)" },
 
             // DEBUG MODE
-            { "debugMode_TXT", "Debug Mode: " },
+            { "debugMode_TXT", "Developer Mode: " },
             { "debugMode_ENABLED", "ENABLED" },
             { "debugMode_DISABLED", "DISABLED" },
             { "debugMode_WARNING", ". Timer will not be enabled." },
@@ -59,7 +63,12 @@ public class Lang_en_EN extends ListResourceBundle {
             { "statsOutput_saveLocation", "Round stats saved in " },
             { "statsOutput_debugModeEnabled", ": stats will not be saved." },
             { "statsFileOutput_1", "- Completed en " },
-            { "statsFileOutput_2", " seconds -" }
+            { "statsFileOutput_2", " seconds -" },
+
+            // REPLAY OPTIONS
+            { "replay_MSG", "Do you want to unlock more sequences?" },
+            { "replay_YES", "YES" },
+            { "replay_NO", "NO" }
     };
 
 }

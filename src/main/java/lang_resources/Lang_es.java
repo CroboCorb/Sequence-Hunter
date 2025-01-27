@@ -1,14 +1,18 @@
 package lang_resources;
 
-import java.util.*;
+import java.util.ListResourceBundle;
 
-public class Lang_es_ES extends ListResourceBundle {
+/**
+ * Resource Bundle for Spanish translations.
+ * @author Crob
+ */
+public class Lang_es extends ListResourceBundle {
 
     public String[][] getContents() {
         return localizedStrings;
     }
 
-    private String[][] localizedStrings = {
+    private final String[][] localizedStrings = {
             // DIFFICULTY MENU STRINGS
             { "difficultyMenu_EASY", "1) Facil [6x6] (FxC)" },
             { "difficultyMenu_MEDIUM", "2) Media [10x10] (FxC)" },
@@ -17,7 +21,7 @@ public class Lang_es_ES extends ListResourceBundle {
             { "difficultyMenu_CUSTOM", "5) Personalizada [-x-] (FxC)" },
 
             // DEBUG MODE
-            { "debugMode_TXT", "Modo Debug: " },
+            { "debugMode_TXT", "Modo Desarrollador: " },
             { "debugMode_ENABLED", "ACTIVADO" },
             { "debugMode_DISABLED", "DESACTIVADO" },
             { "debugMode_WARNING", ". No se activará el temporizador." },
@@ -59,8 +63,12 @@ public class Lang_es_ES extends ListResourceBundle {
             { "statsOutput_saveLocation", "Estadísticas de ronda guardadas en " },
             { "statsOutput_debugModeEnabled", ": las estadísticas no serán guardadas." },
             { "statsFileOutput_1", "- Completada en " },
-            { "statsFileOutput_2", " segundos -" }
+            { "statsFileOutput_2", " segundos -" },
 
+            // REPLAY OPTIONS
+            { "replay_MSG", "¿Quieres desbloquear más secuencias?" },
+            { "replay_YES", "SI" },
+            { "replay_NO", "NO" }
     };
 
 }
